@@ -1,6 +1,42 @@
 require 'spec_helper'
 
+describe '#' do
+  describe('')do
+    it('')do
+      expect().to(eq())
+    end
+  end
 
+  describe('')do
+    it('')do
+      expect().to(eq())
+    end
+  end
+
+  describe('')do
+    it('')do
+      expect().to(eq())
+    end
+  end
+
+  describe('')do
+    it('')do
+      expect().to(eq())
+    end
+  end
+
+  describe('')do
+    it('')do
+      expect().to(eq())
+    end
+  end
+
+  describe('')do
+    it('')do
+      expect().to(eq())
+    end
+  end
+end
 # EXAMPLES FOR TESTING 
 # describe '#Class' do
 #   before(:each) do
