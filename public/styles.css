@@ -10,15 +10,14 @@
   border-radius: 8px;
   background-color: rgba(245, 245, 245, 0.882);
   zoom: 100%;
-}
-
-.box  {
-  background-color: black;
-  
+  color: black
 }
 
 a {
   color: white;
 }
+
+
+
 
 

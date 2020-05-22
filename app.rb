@@ -7,6 +7,12 @@ require('pg')
 DB = PG.connect({:dbname => 'volunteer_tracker'})
 also_reload('lib/**/*.rb')
 
+get('/terminate') do
+  exit # system exit!
+end
+
+puts "This is process #{Process.pid}"
+
 get('/')do
   @projects = Project.all
   erb(:home) 
@@ -39,10 +45,10 @@ patch('/edit/:id')do
   erb(:project)
 end
 
-delete('/edit/:id')do
+delete('/delete/:id')do
   @project = Project.find(params[:id].to_i())
   @project.delete
-  erb(:home)
+  redirect to('/home')
 end
 
 
