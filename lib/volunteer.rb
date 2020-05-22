@@ -38,7 +38,10 @@ class Volunteer
     id = volunteer.fetch("id").to_i
     Volunteer.new({name: name, project_id: project_id, id: id})
   end
-
+  
+  def project
+    Project.find(@project_id)
+  end
   
 end
 
