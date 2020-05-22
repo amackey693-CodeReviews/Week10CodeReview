@@ -4,7 +4,7 @@
 <br>
 <br>
 
-<form action="/<%= @project.id%>/volunteers" method="post">
+<form action="/project/<%= @project.id%>/volunteers" method="post">
   <div class="form-group">
     <input id="first_name" name="first_name" class="form-control" type="text" placeholder = "Enter First Name">
     <br>
@@ -22,6 +22,6 @@
     <li> <%= volunteer.name%> </li>
   <% end %>
   </ul>
-  <% else %>
-<p> Looks like we don't currently have any volunteers! Fill out the box above to sign up!</p>
+<% else %>
+  <p> Looks like we don't currently have any volunteers! Fill out the box above to sign up!</p>
 <% end  %>

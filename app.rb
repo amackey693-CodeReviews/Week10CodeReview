@@ -7,11 +7,6 @@ require('pg')
 DB = PG.connect({:dbname => 'volunteer_tracker'})
 also_reload('lib/**/*.rb')
 
-get('/terminate') do
-  exit # system exit!
-end
-
-puts "This is process #{Process.pid}"
 
 get('/')do
   @projects = Project.all
@@ -23,7 +18,7 @@ get('/home')do
   erb(:home)
 end
 
-post('/project')do
+post('/project/new')do
   new_project = Project.new({title: params[:title], id: nil})
   new_project.save
   redirect to('/home')
@@ -52,21 +47,12 @@ delete('/delete/:id')do
   redirect to('/home')
 end
 
-
-# get('/volunteers')do
-#   @volunteers = Volunteer.all
-#   erb(:volunteers)
-# end
-
-post('/:id/volunteers')do
+post('/project/:id/volunteers')do
   @project = Project.find(params[:id].to_i())
+  @volunteers = Volunteer.all
   full_name = params[:first_name] + " " + params[:last_name]
-  # phone_number = params[:phone_number]
-  # email = params[:email]
-  # user_name = params[:user_name]
-  # password = params[:password]
   new_volunteer = Volunteer.new({name: full_name, project_id: @project.id, id: nil})
-  new_volunteer.save()
+  new_volunteer.save
   erb(:project)
 end
 
