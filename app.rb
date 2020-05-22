@@ -7,6 +7,41 @@ require('pg')
 DB = PG.connect({:dbname => 'volunteer_tracker'})
 also_reload('lib/**/*.rb')
 
+get('/')do
+  @projects = Project.all
+  erb(:home) 
+end
+
+get('/home')do
+  @projects = Project.all
+  erb(:home)
+end
+
+post('/project')do
+  new_project = Project.new({title: params[:title], id: nil})
+  new_project.save
+  redirect to('/home')
+end
+
+# get('/volunteers')do
+#   @volunteers = Volunteer.all
+#   erb(:volunteers)
+# end
+
+# post('/volunteers')do
+#   full_name = params[:first_name] + " " + params[:last_name]
+#   phone_number = params[:phone_number]
+#   email = params[:email]
+#   user_name = params[:user_name]
+#   password = params[:password]
+#   new_volunteer = Volunteer.new({name: full_name, project_id: nil, id: nil})
+#   new_volunteer.save()
+
+#   erb(:thank_you)
+# end
+
+
+
 
 # EXAMPLES FOR GET, POST, PATCH & DELETE
 # get('/') do

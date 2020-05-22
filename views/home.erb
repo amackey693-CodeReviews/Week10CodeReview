@@ -1,16 +1,28 @@
-<h1> PAGE TITLE </h1>
+<h1> Welcome to the Home Page </h1>
 
-<h3> </h3>
+<h3> Current Projects </h3>
 
-<% if @#.any? %>
+<% if @projects.any? %>
   <ul>
-  <% @#.each do |#| %>
-    <li> <%= #.name%> </li>
+  <% @projects.each do |project| %>
+    <li> <%= project.title%> </li>
   <% end %>
   </ul>
   <% else %>
-<p> No info to display! Try again later </p>
+<p> We don't currently have any projects, why don't you add one? </p>
 <% end  %>
 
-<button type="button" class="btn btn-dark"><a href="/home/#">####</a></button>
-<button type="button" class="btn btn-dark"><a href="/admin/login">Admin Login</a></button>
+<form action="/project" method="post">
+  <div class="form-group">
+    <input id="title" name="title" class="form-control" type="text" placeholder = "Project Title">
+    <!-- STRETCH GOAL: DESCRIPTION <input id="description" name="description" class="form-control" type="text" placeholder = "placeholder"> -->
+  </div>
+  <button type="submit" class="btn btn-dark">Create Project</button>
+</form>
+
+<!-- <div class="box">
+  <a href="/volunteers"> Become a volunteer today!</a>
+</div> -->
+<br>
+<!-- <button type="button" class="btn btn-dark"><a href="/volunteers">#</a></button> -->
+<!-- STRETCH GOAL ADMIN PAGE: <button type="button" class="btn btn-dark"><a href="/admin/login">Admin Login</a></button> -->
