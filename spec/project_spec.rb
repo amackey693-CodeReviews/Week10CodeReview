@@ -91,7 +91,4 @@ end
 #       expect(project.volunteers).to eq [volunteer1, volunteer2]
 #     end
 #   end
-
-
-
 # end
