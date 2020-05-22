@@ -1,12 +1,12 @@
-# _APP NAME_
+# _Volunteer Tracker_
 
-#### _A practice application using Ruby, Gem & Pry. DATE_
+#### _A practice application using Ruby, Gem & Pry. 5.22.2020_
 
 #### By _**Allison Mackey**_
 
 ## Description
 
-_This application will allow the user to ._ 
+_This application will allow the user to track projects and the volunteers working on them._ 
 
 ## Setup/Installation Requirements
 

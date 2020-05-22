@@ -4,7 +4,7 @@ require('./lib/album')
 require('./lib/song')
 require('pry')
 require('pg')
-DB = PG.connect({:dbname => ""})
+DB = PG.connect({:dbname => 'volunteer_tracker'})
 also_reload('lib/**/*.rb')
 
 
