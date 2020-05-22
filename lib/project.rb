@@ -13,5 +13,6 @@ class Project
     self.title == project_to_compare.title
   end
   
+  
 end
 
