@@ -79,7 +79,7 @@ describe Volunteer do
 
   describe '#delete' do
     it 'allows an ADMIN to delete a volunteer' do
-      volunteer1 = Volunteer.new({:name => 'Jane', :project_id => project1.id, :id => nil})
+      volunteer1 = Volunteer.new({:name => 'Jane', :project_id => 2, :id => nil})
       volunteer1.save
       volunteer1.delete
       expect(Project.all).to eq []

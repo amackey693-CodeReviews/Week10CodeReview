@@ -31,7 +31,9 @@ class Volunteer
     @id = result.first.fetch("id").to_i
   end
 
-  
+  def delete 
+    DB.exec("DELETE FROM volunteers WHERE id = #{@id};")
+  end
   
   def self.find(id)
     volunteer = DB.exec("SELECT * FROM volunteers WHERE id = #{id};").first
