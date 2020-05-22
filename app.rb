@@ -23,6 +23,29 @@ post('/project')do
   redirect to('/home')
 end
 
+get('/home/:id')do
+  @project = Project.find(params[:id].to_i())
+  erb(:project)
+end
+
+get('/edit/:id')do
+  @project = Project.find(params[:id].to_i())
+  erb(:edit_project)
+end
+
+patch('/edit/:id')do
+  @project = Project.find(params[:id].to_i())
+  @project.update(params[:title])
+  erb(:project)
+end
+
+delete('/edit/:id')do
+  @project = Project.find(params[:id].to_i())
+  @project.delete
+  erb(:home)
+end
+
+
 # get('/volunteers')do
 #   @volunteers = Volunteer.all
 #   erb(:volunteers)

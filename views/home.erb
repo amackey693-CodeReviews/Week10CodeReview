@@ -1,16 +1,17 @@
 <h1> Welcome to the Home Page </h1>
 
 <h3> Current Projects </h3>
-
-<% if @projects.any? %>
-  <ul>
-  <% @projects.each do |project| %>
-    <li> <%= project.title%> </li>
-  <% end %>
-  </ul>
-  <% else %>
-<p> We don't currently have any projects, why don't you add one? </p>
-<% end  %>
+<div class="box">
+  <% if @projects.any? %>
+    <ul>
+    <% @projects.each do |project| %>
+      <li><a href="/home/<%= project.id%>"> <%= project.title%> </a></li>
+    <% end %>
+    </ul>
+    <% else %>
+  <p> We don't currently have any projects, why don't you add one? </p>
+  <% end  %>
+</div>
 
 <form action="/project" method="post">
   <div class="form-group">

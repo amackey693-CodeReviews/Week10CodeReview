@@ -1,0 +1,18 @@
+<h3>Edit : <%= @project.title %></h3>
+
+<%# UPDATE METHOD %>
+<form action="/edit/<%= @project.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <input id="title" class="form-control" name="title" type="text" placeholder="New Project Title">
+  <br>
+  <button type="submit" class="btn btn-dark">Submit</button>
+</form>
+
+<%# DELETE METHOD %>
+<form action="/edit/<%= @project.id%>" method="post">
+  <input name="_method" class="form-control" type="hidden" value="delete">
+  <br>
+  <button type="submit" class="btn btn-dark">Delete Project</button>
+</form>
+<br>
+<button type="button" class="btn btn-dark"><a href="/home<%= @project.id%>">Return to Project Page</a></button>
