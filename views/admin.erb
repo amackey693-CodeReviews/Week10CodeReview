@@ -1,0 +1,13 @@
+<h1>Admin Editing Page</h1>
+
+<% if @#.any? %>
+
+  <% @#.each do |#| %>
+    <p><a href="/admin/edit/<%=#.id%>"> <%=#.name%> </a></p>
+  <% end %>
+
+<% else %>
+  <p>There's currently no information to display!</p>
+<% end %>
+
+<p><a href="/home">Return to the homepage!!</a></p>

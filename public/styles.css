@@ -1,7 +1,9 @@
 .container {
   padding: 50px;
+  display: flex;
   flex-flow: column;
   text-align: center;
+  justify-content: center;
   background-color: black;
 }
 
