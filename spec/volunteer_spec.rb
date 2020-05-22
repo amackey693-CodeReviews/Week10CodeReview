@@ -63,6 +63,20 @@ describe Volunteer do
     end
   end
 
+  describe '.find_by_project' do
+    it 'finds volunteers on a specific project ' do
+      project1 = Project.new({:title => 'Teaching Kids to Code', :id => nil})
+      project1.save
+      volunteer1 = Volunteer.new({:name => 'Jane', :project_id => project1.id, :id => nil})
+      volunteer1.save
+      volunteer2 = Volunteer.new({:name => 'Jane', :project_id => project1.id, :id => nil})
+      volunteer2.save
+      volunteer3 = Volunteer.new({:name => 'Jane', :project_id => project1.id, :id => nil})
+      volunteer3.save
+      expect(Volunteer.find_by_project(project1.id)).to eq [volunteer1, volunteer2, volunteer3]
+    end
+  end
+
 end
  
 
