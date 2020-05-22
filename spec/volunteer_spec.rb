@@ -86,6 +86,20 @@ describe Volunteer do
     end
   end
 
+  context '#update' do
+    it 'allows an ADMIN to update a volunteers name & reassign the project ID if needed' do
+      volunteer1 = Volunteer.new({:name => 'Jane', :project_id => 2, :id => nil})
+      volunteer1.save
+      volunteer1.update("Jill", 2)
+      volunteer2 = Volunteer.new({:name => 'Alex', :project_id => 2, :id => nil})
+      volunteer2.save
+      volunteer2.update("Alex", 4)
+      expect(volunteer1.name).to eq "Jill"
+      expect(volunteer2.project_id).to eq 4
+    end
+
+  end
+
 end
  
 
