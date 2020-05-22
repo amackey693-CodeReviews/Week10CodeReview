@@ -1,3 +1,27 @@
 <h1><%= @project.title%></h1>
 
 <button type="button" class="btn btn-dark"><a href="/edit/<%= @project.id %>"> Edit Project </a></button>
+<br>
+<br>
+
+<form action="/<%= @project.id%>/volunteers" method="post">
+  <div class="form-group">
+    <input id="first_name" name="first_name" class="form-control" type="text" placeholder = "Enter First Name">
+    <br>
+    <input id="last_name" name="last_name" class="form-control" type="text" placeholder = "Enter Last Name">
+    <br>
+    </div>
+  <button type="submit" class="btn btn-dark">Submit</button>
+</form>
+<br>
+<br>
+
+<% if @volunteers.any? %>
+  <ul>
+  <% @volunteers.each do |volunteer| %>
+    <li> <%= volunteer.name%> </li>
+  <% end %>
+  </ul>
+  <% else %>
+<p> Looks like we don't currently have any volunteers! Fill out the box above to sign up!</p>
+<% end  %>

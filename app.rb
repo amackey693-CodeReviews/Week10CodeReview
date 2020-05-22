@@ -31,6 +31,7 @@ end
 
 get('/home/:id')do
   @project = Project.find(params[:id].to_i())
+  @volunteers = Volunteer.all
   erb(:project)
 end
 
@@ -57,52 +58,17 @@ end
 #   erb(:volunteers)
 # end
 
-# post('/volunteers')do
-#   full_name = params[:first_name] + " " + params[:last_name]
-#   phone_number = params[:phone_number]
-#   email = params[:email]
-#   user_name = params[:user_name]
-#   password = params[:password]
-#   new_volunteer = Volunteer.new({name: full_name, project_id: nil, id: nil})
-#   new_volunteer.save()
-
-#   erb(:thank_you)
-# end
-
-
+post('/:id/volunteers')do
+  @project = Project.find(params[:id].to_i())
+  full_name = params[:first_name] + " " + params[:last_name]
+  # phone_number = params[:phone_number]
+  # email = params[:email]
+  # user_name = params[:user_name]
+  # password = params[:password]
+  new_volunteer = Volunteer.new({name: full_name, project_id: @project.id, id: nil})
+  new_volunteer.save()
+  erb(:project)
+end
 
 
-# EXAMPLES FOR GET, POST, PATCH & DELETE
-# get('/') do
-#   @albums = Album.sort
-#   erb(:albums) #erb file name
-# end
 
-# post('/albums') do ## Adds album to list of albums, cannot access in URL bar
-#   name = params[:album_name]
-#   artist = params[:album_artist]
-#   year = params[:album_year]
-#   genre = params[:album_genre]
-#   song = params[:song_id]
-#   in_inventory = params[:in_inventory]
-#   album = Album.new(name, nil, artist, genre, year)
-#   album.save()
-#   redirect to('/albums')
-# end
-
-# patch('/albums/:id') do
-#   @album = Album.find(params[:id].to_i())
-#   @albums = Album.all
-#   if params[:buy]
-#     @album.sold()
-#   else  
-#     @album.update(params[:name])
-#   end
-#   erb(:albums)
-# end
-
-# delete('/albums/:id') do
-#   @album = Album.find(params[:id].to_i())
-#   @album.delete()
-#   redirect to('/albums')
-# end
