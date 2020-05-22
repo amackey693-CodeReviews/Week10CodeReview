@@ -70,7 +70,7 @@ describe '#Project' do
     end
   end
 
-  context '#delete' do
+  describe '#delete' do
     it 'allows an ADMIN to delete a project' do
       project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
       project.save
