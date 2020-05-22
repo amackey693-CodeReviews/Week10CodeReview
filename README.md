@@ -2,7 +2,7 @@
 
 #### _A practice application using Ruby, Gem & Pry. DATE_
 
-#### By _**YOUR NAME HERE**_
+#### By _**Allison Mackey**_
 
 ## Description
 
@@ -11,10 +11,11 @@ _This application will allow the user to ._
 ## Setup/Installation Requirements
 
 * _View this Repository Here on Heroku: (insert a link)_
-* _Clone Repository from GitHub :  https://github.com/user-name/repo-name.git_
+* _Clone Repository from GitHub :  https://github.com/amackey693/Week10CodeReview.git_
 * _Open folder in Virtual Studio Code (or your text editor of choice)_
-* _Open your terminal in Virtual Studio Code & type code . this will open all files associated with this app. 
+* _Open your terminal in Virtual Studio Code & type code . this will open all files associated with this app._
 * _Before you initialize GIT, be sure to delete the already exisiting .git file by running this command in your terminal $rm -rf .git_
+* _Run **bundle install** in your terminal to install the Gemfile.lock_
 * _Create your own repository and push new changes to GitHub_
 
 ## Behavior Driven Development 
@@ -47,4 +48,4 @@ _Ruby, Gem, Pry_
 ### Licenses
 *MIT LICENSE*
 
-Copyright (c) 2020 **_YOUR_NAME_**
+Copyright (c) 2020 **_Allison Mackey_**

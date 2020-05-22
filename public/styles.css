@@ -1,0 +1,19 @@
+.container {
+  padding: 50px;
+  flex-flow: column;
+  text-align: center;
+  background-color: black;
+}
+
+.well {
+  padding: 50px;
+  width: 200%;
+  border-radius: 8px;
+  background-color: rgba(245, 245, 245, 0.65);
+  color: black;
+  zoom: 300%;
+}
+
+a {
+  color: white;
+}

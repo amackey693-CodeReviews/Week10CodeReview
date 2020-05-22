@@ -1,7 +1,5 @@
-require 'rspec'
-require 'song'
-require 'album'
-require 'pry'
+require 'spec_helper'
+
 
 # EXAMPLES FOR TESTING 
 # describe '#Class' do

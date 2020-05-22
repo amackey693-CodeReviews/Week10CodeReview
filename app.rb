@@ -3,6 +3,8 @@ require('sinatra/reloader')
 require('./lib/album')
 require('./lib/song')
 require('pry')
+require('pg')
+DB = PG.connect({:dbname => ""})
 also_reload('lib/**/*.rb')
 
 
