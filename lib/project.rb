@@ -44,6 +44,10 @@ class Project
   def delete
     DB.exec("DELETE FROM projects WHERE id = #{@id};")
   end
+
+  def volunteers
+    Volunteer.find_by_project(@id)
+  end
 end
 
 ## stretch - add sort method & search method
