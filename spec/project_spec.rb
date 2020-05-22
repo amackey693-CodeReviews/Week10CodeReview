@@ -16,6 +16,14 @@ describe '#Project' do
     end
   end
 
+  describe '#save' do
+    it 'saves a project to the database' do
+      project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
+      project.save
+      expect(Project.all).to eq [project]
+    end
+  end
+
   context '#id' do
     it 'returns the id of the project before saving project' do
       project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
