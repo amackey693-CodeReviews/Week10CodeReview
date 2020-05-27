@@ -38,7 +38,7 @@ end
 patch('/edit/:id')do
   @project = Project.find(params[:id].to_i())
   @project.update(params[:title])
-  erb(:project)
+  redirect to('/home')
 end
 
 delete('/delete/:id')do
@@ -49,7 +49,7 @@ end
 
 post('/project/:id/volunteers')do
   @project = Project.find(params[:id].to_i())
-  @volunteers = Volunteer.all
+  # @volunteers = Volunteer.all
   full_name = params[:first_name] + " " + params[:last_name]
   new_volunteer = Volunteer.new({name: full_name, project_id: @project.id, id: nil})
   new_volunteer.save
