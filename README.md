@@ -10,7 +10,7 @@ _This application will allow the user to track projects and the volunteers worki
 
 ## Setup/Installation Requirements
 
-* _View this Repository Here on Heroku: (insert a link)_
+* _View this Repository Here on Heroku: https://nameless-inlet-14682.herokuapp.com/_
 * _Clone Repository from GitHub :  https://github.com/amackey693/Week10CodeReview.git_
 * _Open folder in Virtual Studio Code (or your text editor of choice)_
 * _Open your terminal in Virtual Studio Code & type code . this will open all files associated with this app._
@@ -33,7 +33,7 @@ _This application will allow the user to track projects and the volunteers worki
 
 ## Known Bugs
 
-_Bug with CSS, links are white and style sheet changes are not syncing._
+_Bug with CSS, links are white and style sheet changes are not syncing. Heroku deploy failed, unknown errors_
 
 ## Support and contact details
 
