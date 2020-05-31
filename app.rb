@@ -26,7 +26,7 @@ end
 
 get('/home/:id')do
   @project = Project.find(params[:id].to_i())
-  @volunteers = Volunteer.all
+  # @volunteers = Volunteer.all
   erb(:project)
 end
 
@@ -47,7 +47,7 @@ delete('/delete/:id')do
   redirect to('/home')
 end
 
-post('/project/:id/volunteers')do
+post('/project/:id')do
   @project = Project.find(params[:id].to_i())
   # @volunteers = Volunteer.all
   full_name = params[:first_name] + " " + params[:last_name]
@@ -55,6 +55,28 @@ post('/project/:id/volunteers')do
   new_volunteer.save
   erb(:project)
 end
+
+get('/:project_id/volunteer/:id')do
+  @project = Project.find(params[:project_id])
+  @volunteer = Volunteer.find(params[:id].to_i())
+  erb(:edit_volunteer)
+end
+
+patch('/:project_id/volunteer/:id')do
+  @project = Project.find(params[:project_id])
+  @volunteer = Volunteer.find(params[:id].to_i())
+  @volunteer.update(params[:name])
+  erb(:project)
+end
+
+delete('/:project_id/volunteer/:id')do
+  @project = Project.find(params[:project_id])
+  @volunteer = Volunteer.find(params[:id].to_i())
+  @volunteer.delete
+  erb(:project)
+end
+
+
 
 
 

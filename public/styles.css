@@ -14,10 +14,13 @@
 }
 
 a {
+  color: black;
+}
+
+a:hover {
   color: white;
 }
 
-
-
-
-
+body {
+  background-color: black;
+}

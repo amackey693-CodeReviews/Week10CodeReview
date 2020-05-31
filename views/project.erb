@@ -4,7 +4,7 @@
 <br>
 <br>
 
-<form action="/project/<%= @project.id%>/volunteers" method="post">
+<form action="/project/<%= @project.id%>" method="post">
   <div class="form-group">
     <input id="first_name" name="first_name" class="form-control" type="text" placeholder = "Enter First Name">
     <br>
@@ -16,10 +16,10 @@
 <br>
 <br>
 
-<% if @volunteers.any? %>
+<% if @project.volunteers.any? %>
   <ul>
-  <% @volunteers.each do |volunteer| %>
-    <li> <%= volunteer.name%> </li>
+  <% @project.volunteers.each do |volunteer| %>
+    <li><a href="/<%= volunteer.project_id %>/volunteer/<%= volunteer.id%>"> <%= volunteer.name%> </a></li>
   <% end %>
   </ul>
 <% else %>

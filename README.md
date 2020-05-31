@@ -23,11 +23,11 @@ _This application will allow the user to track projects and the volunteers worki
 
 |   Behavior Description        |
 |-------------------------------|
-| 1. Allow user to view, add & update projects []|
-| 2. Allow user to view and add volunteers []|
+| 1. Allow user to view, add & update projects [√]|
+| 2. Allow user to view and add volunteers [√]|
 | 3. Allow user to add volunteers to a project []|
-| 4. Allow ADMIN to delete projects []|
-| 5. Allow ADMIN to remove volunteers []| 
+| 4. Allow ADMIN to delete projects [√]|
+| 5. Allow ADMIN to remove volunteers [√]| 
 | 6.  []|
 | 7.  []|
 
