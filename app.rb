@@ -64,15 +64,15 @@ end
 
 patch('/:project_id/volunteer/:id')do
   @project = Project.find(params[:project_id])
-  @volunteer = Volunteer.find(params[:id].to_i())
-  @volunteer.update(params[:name])
+  volunteer = Volunteer.find(params[:id].to_i())
+  volunteer.update(params[:name])
   erb(:project)
 end
 
 delete('/:project_id/volunteer/:id')do
   @project = Project.find(params[:project_id])
-  @volunteer = Volunteer.find(params[:id].to_i())
-  @volunteer.delete
+  volunteer = Volunteer.find(params[:id].to_i())
+  volunteer.delete
   erb(:project)
 end
 
