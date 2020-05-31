@@ -25,20 +25,19 @@ _This application will allow the user to track projects and the volunteers worki
 |-------------------------------|
 | 1. Allow user to view, add & update projects [√]|
 | 2. Allow user to view and add volunteers [√]|
-| 3. Allow user to add volunteers to a project []|
-| 4. Allow ADMIN to delete projects [√]|
-| 5. Allow ADMIN to remove volunteers [√]| 
-| 6.  []|
-| 7.  []|
+| 3. Allow user to add volunteers to a project [√]|
+| 4. Allow user to delete projects [√]|
+| 5. Allow user to remove volunteers [√]| 
+
 
 
 ## Known Bugs
 
-_No known bugs at this time_
+_Bug with CSS, links are white and style sheet changes are not syncing._
 
 ## Support and contact details
 
-_If you have any questions or any issues please feel free to submit an issue here: https://github.com/username/reponame/issues_
+_If you have any questions or any issues please feel free to submit an issue here: https://github.com/amackey693/Week10CodeReview/issues_
 
 ## Technologies Used
 
