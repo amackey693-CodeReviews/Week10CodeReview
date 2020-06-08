@@ -13,8 +13,12 @@
   color: black
 }
 
+.well.a {
+  color:black;
+}
+
 a {
-  color: black;
+  color:white;
 }
 
 a:hover {
@@ -23,4 +27,12 @@ a:hover {
 
 body {
   background-color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  color: white;
 }
